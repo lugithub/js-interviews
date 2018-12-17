@@ -1,0 +1,36 @@
+<html>
+  
+  <body>
+    <style>
+      div {
+        padding: 100px;
+      }
+      #d1 {
+        background-color: red;
+      }
+      #d2 {
+        background-color: green;
+      }
+      #d3 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+    </style>
+    <div id="d1">
+      <div id="d2">
+        <div id="d3"/> 
+      </div>
+    </div>
+    <script>
+      function d(id) {
+        console.log(id);
+      }
+
+      document.getElementById('d1').addEventListener('click', d.bind(null, 'd1'));
+      document.getElementById('d2').addEventListener('click', d.bind(null, 'd2'), true);
+      document.getElementById('d3').addEventListener('click', d.bind(null, 'd3'));
+
+    </script>
+  </body>
+</html>
